@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dashboard | EduMentor</title>
+  <link rel="stylesheet" href="libs/bootstrap.min.css">
+  <script src="libs/chart.min.js"></script>
+</head>
+<body class="p-4 bg-light">
+  <div class="container">
+    <h2 class="mb-4">Student Dashboard</h2>
+    <canvas id="gradesChart" height="100"></canvas>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('gradesChart');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Math', 'Science', 'English', 'History'],
+        datasets: [{
+          label: 'Your Grades',
+          data: [85, 92, 78, 88],
+          backgroundColor: 'rgba(0, 123, 255, 0.6)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+  </script>
+</body>
+</html>
