@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduMentor Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>EduMentor</h1>
+  </header>
+
+  <main>
+    <section id="mentor-form">
+      <h2>Request a Mentor</h2>
+      <form id="requestForm">
+        <input type="text" id="studentName" placeholder="Your Name" required />
+        <input type="text" id="studentId" placeholder="Your Student ID" required />
+        <button type="submit">Send Request</button>
+      </form>
+    </section>
+
+    <section id="mentor-status">
+      <h2>Mentorship Status</h2>
+      <div id="statusOutput">No request submitted yet.</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
