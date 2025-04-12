@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package EduMentor_dummy_project.src;
+=======
+package src;
+>>>>>>> d17f422c8270bb43803cf0c6f513394cc29bc758
 
 import java.sql.Connection;
 import java.sql.DriverManager;
