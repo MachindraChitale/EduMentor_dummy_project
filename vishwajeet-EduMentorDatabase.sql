@@ -57,3 +57,5 @@ foreign key(subject_id) references subjects(subject_id)
  foreign key(student_id)references student(student_id),
   foreign key(badge_id)references badges(badge_id)
  );
+
+

@@ -1,26 +1,23 @@
+package EduMentor_dummy_project.src;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-    private static final String URL = "jdbc:mysql://localhost:3306/edumentor";
+    private static final String URL = "jdbc:mysql://localhost:3306/EduMentorDatabase";
     private static final String USER = "root";
-    private static final String PASSWORD = "Maccy@123";
+    private static final String PASSWORD = "vishu0509";
 
-    public static Connection connect() {
+    public static Connection getConnection() {
         try {
             Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
             System.out.println("✅ Connected to MySQL successfully!");
             return conn;
         } catch (SQLException e) {
-            System.out.println("❌ Connection failed!");
-            e.printStackTrace();
-            return null;
+            System.err.println("❌ Failed to connect to MySQL!");
+            System.err.println("Reason: " + e.getMessage());
+            return null; // return null if connection fails
         }
-    }
-
-    // Optional: for testing
-    public static void main(String[] args) {
-        connect();
     }
 }
